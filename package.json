@@ -1,6 +1,6 @@
 {
   "name": "demo01",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The official TypeScript library for the Demo01 API",
   "author": "Demo01 <support@nengliba.com>",
   "types": "dist/index.d.ts",
