@@ -55,12 +55,12 @@ $ cd demo01-typescript
 # With yarn
 $ yarn link
 $ cd ../my-package
-$ yarn link demo01
+$ yarn link ketao
 
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link --global demo01
+$ pnpm link --global ketao
 ```
 
 ## Running tests

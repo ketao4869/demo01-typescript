@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "demo01/*": ["./dist/src/*"],
-      "demo01": ["./dist/src/index.ts"]
+      "ketao/*": ["./dist/src/*"],
+      "ketao": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,

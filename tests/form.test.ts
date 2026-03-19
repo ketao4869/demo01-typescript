@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'demo01/internal/uploads';
-import { toFile } from 'demo01/core/uploads';
+import { multipartFormRequestOptions, createForm } from 'ketao/internal/uploads';
+import { toFile } from 'ketao/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

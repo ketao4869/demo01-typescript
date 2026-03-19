@@ -25,7 +25,7 @@ export default tseslint.config(
         {
           patterns: [
             {
-              regex: '^demo01(/.*)?',
+              regex: '^ketao(/.*)?',
               message: 'Use a relative import, not a package import.',
             },
           ],
