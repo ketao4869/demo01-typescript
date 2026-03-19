@@ -8,8 +8,8 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
-      "demo01/*": ["./src/*"],
-      "demo01": ["./src/index.ts"]
+      "ketao/*": ["./src/*"],
+      "ketao": ["./src/index.ts"]
     },
     "noEmit": true,
 
