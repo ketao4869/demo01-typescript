@@ -1,4 +1,4 @@
-import { createPathTagFunction, encodeURIPath } from 'demo01/internal/utils/path';
+import { createPathTagFunction, encodeURIPath } from 'ketao/internal/utils/path';
 import { inspect } from 'node:util';
 import { runInNewContext } from 'node:vm';
 

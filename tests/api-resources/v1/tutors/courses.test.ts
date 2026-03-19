@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Demo01 from 'demo01';
+import Demo01 from 'ketao';
 
 const client = new Demo01({
   apiKey: 'My API Key',

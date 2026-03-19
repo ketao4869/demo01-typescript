@@ -1,6 +1,6 @@
 import fs from 'fs';
-import type { ResponseLike } from 'demo01/internal/to-file';
-import { toFile } from 'demo01/core/uploads';
+import type { ResponseLike } from 'ketao/internal/to-file';
+import { toFile } from 'ketao/core/uploads';
 import { File } from 'node:buffer';
 
 class MyClass {
@@ -97,7 +97,7 @@ describe('missing File error message', () => {
   });
 
   test('is thrown', async () => {
-    const uploads = await import('demo01/core/uploads');
+    const uploads = await import('ketao/core/uploads');
     await expect(
       uploads.toFile(mockResponse({ url: 'https://example.com/my/audio.mp3' })),
     ).rejects.toMatchInlineSnapshot(
