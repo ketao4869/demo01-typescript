@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.4 (2026-03-25)
+
+Full Changelog: [v0.0.3...v0.0.4](https://github.com/ketao4869/demo01-typescript/compare/v0.0.3...v0.0.4)
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([1eb13c7](https://github.com/ketao4869/demo01-typescript/commit/1eb13c7b2142001de07cad9d2b9d055b3a187c78))
+* **internal:** update gitignore ([3d39acc](https://github.com/ketao4869/demo01-typescript/commit/3d39acc9e55aaf382135bb1c60457d60117aa96e))
+
 ## 0.0.3 (2026-03-19)
 
 Full Changelog: [v0.0.2...v0.0.3](https://github.com/ketao4869/demo01-typescript/compare/v0.0.2...v0.0.3)
