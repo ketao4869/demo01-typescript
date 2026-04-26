@@ -30,12 +30,7 @@ export class TimeSlots extends APIResource {
    * ```
    */
   create(podID: string, body: TimeSlotCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post(path`/api/v1/pods/${podID}/time-slots`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post(path`/api/v1/pods/${podID}/time-slots`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -53,12 +48,8 @@ export class TimeSlots extends APIResource {
    * ```
    */
   retrieve(id: string, params: TimeSlotRetrieveParams, options?: RequestOptions): APIPromise<Response> {
-    const { podId } = params;
-    return this._client.get(path`/api/v1/pods/${podId}/time-slots/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { podId } = params
+    return this._client.get(path`/api/v1/pods/${podId}/time-slots/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -76,12 +67,7 @@ export class TimeSlots extends APIResource {
    * ```
    */
   list(podID: string, query: TimeSlotListParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/pods/${podID}/time-slots`, {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/pods/${podID}/time-slots`, { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -99,12 +85,8 @@ export class TimeSlots extends APIResource {
    * ```
    */
   delete(id: string, params: TimeSlotDeleteParams, options?: RequestOptions): APIPromise<Response> {
-    const { podId } = params;
-    return this._client.delete(path`/api/v1/pods/${podId}/time-slots/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { podId } = params
+    return this._client.delete(path`/api/v1/pods/${podId}/time-slots/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -127,17 +109,8 @@ export class TimeSlots extends APIResource {
    * console.log(content);
    * ```
    */
-  createBatch(
-    podID: string,
-    body: TimeSlotCreateBatchParams,
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.post(path`/api/v1/pods/${podID}/time-slots/batch`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  createBatch(podID: string, body: TimeSlotCreateBatchParams, options?: RequestOptions): APIPromise<Response> {
+    return this._client.post(path`/api/v1/pods/${podID}/time-slots/batch`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -154,13 +127,8 @@ export class TimeSlots extends APIResource {
    * ```
    */
   lock(id: string, params: TimeSlotLockParams, options?: RequestOptions): APIPromise<Response> {
-    const { podId, reason } = params;
-    return this._client.put(path`/api/v1/pods/${podId}/time-slots/${id}/lock`, {
-      query: { reason },
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { podId, reason } = params
+    return this._client.put(path`/api/v1/pods/${podId}/time-slots/${id}/lock`, { query: { reason }, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -178,12 +146,8 @@ export class TimeSlots extends APIResource {
    * ```
    */
   unlock(id: string, params: TimeSlotUnlockParams, options?: RequestOptions): APIPromise<Response> {
-    const { podId } = params;
-    return this._client.put(path`/api/v1/pods/${podId}/time-slots/${id}/unlock`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { podId } = params
+    return this._client.put(path`/api/v1/pods/${podId}/time-slots/${id}/unlock`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -282,6 +246,6 @@ export declare namespace TimeSlots {
     type TimeSlotDeleteParams as TimeSlotDeleteParams,
     type TimeSlotCreateBatchParams as TimeSlotCreateBatchParams,
     type TimeSlotLockParams as TimeSlotLockParams,
-    type TimeSlotUnlockParams as TimeSlotUnlockParams,
+    type TimeSlotUnlockParams as TimeSlotUnlockParams
   };
 }

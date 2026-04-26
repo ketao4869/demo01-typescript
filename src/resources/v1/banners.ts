@@ -28,12 +28,7 @@ export class Banners extends APIResource {
    * ```
    */
   create(body: BannerCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/banners', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/banners', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -48,11 +43,7 @@ export class Banners extends APIResource {
    * ```
    */
   retrieve(position: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/banners/position/${position}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/banners/position/${position}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -73,12 +64,7 @@ export class Banners extends APIResource {
    * ```
    */
   update(id: string, body: BannerUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/banners/${id}`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/banners/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -93,11 +79,7 @@ export class Banners extends APIResource {
    * ```
    */
   list(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/banners', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/banners', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -112,11 +94,7 @@ export class Banners extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/banners/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/banners/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -223,6 +201,6 @@ export declare namespace Banners {
   export {
     type BannerCreate as BannerCreate,
     type BannerCreateParams as BannerCreateParams,
-    type BannerUpdateParams as BannerUpdateParams,
+    type BannerUpdateParams as BannerUpdateParams
   };
 }

@@ -28,12 +28,7 @@ export class DeviceAlerts extends APIResource {
    * ```
    */
   create(body: DeviceAlertCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/device-alerts', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/device-alerts', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -50,11 +45,7 @@ export class DeviceAlerts extends APIResource {
    * ```
    */
   retrieve(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/device-alerts/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/device-alerts/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -69,12 +60,7 @@ export class DeviceAlerts extends APIResource {
    * ```
    */
   list(query: DeviceAlertListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/device-alerts', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/device-alerts', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -91,12 +77,7 @@ export class DeviceAlerts extends APIResource {
    * ```
    */
   handle(id: number, body: DeviceAlertHandleParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/device-alerts/${id}/handle`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/device-alerts/${id}/handle`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -110,16 +91,8 @@ export class DeviceAlerts extends APIResource {
    * console.log(content);
    * ```
    */
-  statistics(
-    query: DeviceAlertStatisticsParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.get('/api/v1/device-alerts/statistics', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  statistics(query: DeviceAlertStatisticsParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
+    return this._client.get('/api/v1/device-alerts/statistics', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -191,6 +164,6 @@ export declare namespace DeviceAlerts {
     type DeviceAlertCreateParams as DeviceAlertCreateParams,
     type DeviceAlertListParams as DeviceAlertListParams,
     type DeviceAlertHandleParams as DeviceAlertHandleParams,
-    type DeviceAlertStatisticsParams as DeviceAlertStatisticsParams,
+    type DeviceAlertStatisticsParams as DeviceAlertStatisticsParams
   };
 }

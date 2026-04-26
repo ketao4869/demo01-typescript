@@ -26,12 +26,7 @@ export class Enrollments extends APIResource {
    * ```
    */
   create(body: EnrollmentCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/enrollments', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/enrollments', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -48,11 +43,7 @@ export class Enrollments extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/enrollments/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/enrollments/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -67,12 +58,7 @@ export class Enrollments extends APIResource {
    * ```
    */
   list(query: EnrollmentListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/enrollments', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/enrollments', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -89,12 +75,7 @@ export class Enrollments extends APIResource {
    * ```
    */
   audit(id: string, body: EnrollmentAuditParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/enrollments/${id}/audit`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/enrollments/${id}/audit`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -109,11 +90,7 @@ export class Enrollments extends APIResource {
    * ```
    */
   cancel(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/enrollments/${id}/cancel`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/enrollments/${id}/cancel`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -162,6 +139,6 @@ export declare namespace Enrollments {
   export {
     type EnrollmentCreateParams as EnrollmentCreateParams,
     type EnrollmentListParams as EnrollmentListParams,
-    type EnrollmentAuditParams as EnrollmentAuditParams,
+    type EnrollmentAuditParams as EnrollmentAuditParams
   };
 }

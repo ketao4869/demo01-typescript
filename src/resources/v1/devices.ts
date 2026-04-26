@@ -27,12 +27,7 @@ export class Devices extends APIResource {
    * ```
    */
   create(body: DeviceCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/devices', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/devices', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -47,11 +42,7 @@ export class Devices extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/devices/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/devices/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -66,12 +57,7 @@ export class Devices extends APIResource {
    * ```
    */
   update(id: string, body: DeviceUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/devices/${id}`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/devices/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -86,12 +72,7 @@ export class Devices extends APIResource {
    * ```
    */
   list(query: DeviceListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/devices', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/devices', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -106,11 +87,7 @@ export class Devices extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/devices/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/devices/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -125,11 +102,7 @@ export class Devices extends APIResource {
    * ```
    */
   listByPod(podID: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/devices/pod/${podID}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/devices/pod/${podID}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -243,6 +216,6 @@ export declare namespace Devices {
   export {
     type DeviceCreateParams as DeviceCreateParams,
     type DeviceUpdateParams as DeviceUpdateParams,
-    type DeviceListParams as DeviceListParams,
+    type DeviceListParams as DeviceListParams
   };
 }

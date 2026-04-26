@@ -26,11 +26,7 @@ export class Users extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/users/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/users/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -45,12 +41,7 @@ export class Users extends APIResource {
    * ```
    */
   update(id: string, body: UserUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/users/${id}`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/users/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -66,12 +57,7 @@ export class Users extends APIResource {
    * ```
    */
   list(query: UserListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/users', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/users', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -86,11 +72,7 @@ export class Users extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/users/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/users/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -105,11 +87,7 @@ export class Users extends APIResource {
    * ```
    */
   disable(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/users/${id}/disable`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/users/${id}/disable`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -124,11 +102,7 @@ export class Users extends APIResource {
    * ```
    */
   enable(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/users/${id}/enable`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/users/${id}/enable`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -150,12 +124,7 @@ export class Users extends APIResource {
    * ```
    */
   register(body: UserRegisterParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/users/register', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/users/register', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -172,12 +141,7 @@ export class Users extends APIResource {
    * ```
    */
   resetPassword(id: string, body: UserResetPasswordParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/users/${id}/reset-password`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/users/${id}/reset-password`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -319,8 +283,11 @@ export declare namespace Users {
     type UserUpdateParams as UserUpdateParams,
     type UserListParams as UserListParams,
     type UserRegisterParams as UserRegisterParams,
-    type UserResetPasswordParams as UserResetPasswordParams,
+    type UserResetPasswordParams as UserResetPasswordParams
   };
 
-  export { Roles as Roles, type RoleAssignParams as RoleAssignParams };
+  export {
+    Roles as Roles,
+    type RoleAssignParams as RoleAssignParams
+  };
 }

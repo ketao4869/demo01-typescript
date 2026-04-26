@@ -27,11 +27,7 @@ export class HrOrganizations extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/hr-organizations/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/hr-organizations/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -47,16 +43,14 @@ export class HrOrganizations extends APIResource {
    * ```
    */
   retrieveHrOrganizations(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/hr-organizations', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/hr-organizations', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
 HrOrganizations.Tree = Tree;
 
 export declare namespace HrOrganizations {
-  export { Tree as Tree };
+  export {
+    Tree as Tree
+  };
 }

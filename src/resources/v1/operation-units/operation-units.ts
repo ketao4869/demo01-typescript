@@ -35,12 +35,7 @@ export class OperationUnits extends APIResource {
    * ```
    */
   create(body: OperationUnitCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/operation-units', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/operation-units', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -56,11 +51,7 @@ export class OperationUnits extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/operation-units/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/operation-units/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -77,12 +68,7 @@ export class OperationUnits extends APIResource {
    * ```
    */
   update(id: string, body: OperationUnitUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/operation-units/${id}`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/operation-units/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -97,16 +83,8 @@ export class OperationUnits extends APIResource {
    * console.log(content);
    * ```
    */
-  list(
-    query: OperationUnitListParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.get('/api/v1/operation-units', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  list(query: OperationUnitListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
+    return this._client.get('/api/v1/operation-units', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -123,11 +101,7 @@ export class OperationUnits extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/operation-units/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/operation-units/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -143,11 +117,7 @@ export class OperationUnits extends APIResource {
    * ```
    */
   listEnabled(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/operation-units/enabled', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/operation-units/enabled', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -161,18 +131,9 @@ export class OperationUnits extends APIResource {
    * console.log(content);
    * ```
    */
-  lock(
-    id: string,
-    params: OperationUnitLockParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    const { reason } = params ?? {};
-    return this._client.put(path`/api/v1/operation-units/${id}/lock`, {
-      query: { reason },
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  lock(id: string, params: OperationUnitLockParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
+    const { reason } = params ?? {}
+    return this._client.put(path`/api/v1/operation-units/${id}/lock`, { query: { reason }, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -189,11 +150,7 @@ export class OperationUnits extends APIResource {
    * ```
    */
   unlock(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/operation-units/${id}/unlock`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/operation-units/${id}/unlock`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -283,10 +240,16 @@ export declare namespace OperationUnits {
     type OperationUnitCreateParams as OperationUnitCreateParams,
     type OperationUnitUpdateParams as OperationUnitUpdateParams,
     type OperationUnitListParams as OperationUnitListParams,
-    type OperationUnitLockParams as OperationUnitLockParams,
+    type OperationUnitLockParams as OperationUnitLockParams
   };
 
-  export { Pods as Pods, type PodCreateParams as PodCreateParams };
+  export {
+    Pods as Pods,
+    type PodCreateParams as PodCreateParams
+  };
 
-  export { DataScopes as DataScopes, type DataScopeCreateParams as DataScopeCreateParams };
+  export {
+    DataScopes as DataScopes,
+    type DataScopeCreateParams as DataScopeCreateParams
+  };
 }

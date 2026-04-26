@@ -25,12 +25,7 @@ export class Feedbacks extends APIResource {
    * ```
    */
   create(body: FeedbackCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/feedbacks', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/feedbacks', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -45,11 +40,7 @@ export class Feedbacks extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/feedbacks/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/feedbacks/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -64,12 +55,7 @@ export class Feedbacks extends APIResource {
    * ```
    */
   list(query: FeedbackListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/feedbacks', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/feedbacks', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -86,12 +72,7 @@ export class Feedbacks extends APIResource {
    * ```
    */
   process(id: string, body: FeedbackProcessParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/feedbacks/${id}/process`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/feedbacks/${id}/process`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -106,11 +87,7 @@ export class Feedbacks extends APIResource {
    * ```
    */
   statistics(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/feedbacks/statistics', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/feedbacks/statistics', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -157,6 +134,6 @@ export declare namespace Feedbacks {
   export {
     type FeedbackCreateParams as FeedbackCreateParams,
     type FeedbackListParams as FeedbackListParams,
-    type FeedbackProcessParams as FeedbackProcessParams,
+    type FeedbackProcessParams as FeedbackProcessParams
   };
 }

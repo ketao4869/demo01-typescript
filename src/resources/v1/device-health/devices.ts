@@ -23,10 +23,6 @@ export class Devices extends APIResource {
    * ```
    */
   retrieveStatus(deviceID: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/device-health/devices/${deviceID}/status`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/device-health/devices/${deviceID}/status`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }

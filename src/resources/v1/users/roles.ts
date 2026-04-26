@@ -22,11 +22,7 @@ export class Roles extends APIResource {
    * ```
    */
   list(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/users/${id}/roles`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/users/${id}/roles`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -43,13 +39,8 @@ export class Roles extends APIResource {
    * ```
    */
   assign(id: string, params: RoleAssignParams, options?: RequestOptions): APIPromise<Response> {
-    const { body } = params;
-    return this._client.put(path`/api/v1/users/${id}/roles`, {
-      body: body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { body } = params
+    return this._client.put(path`/api/v1/users/${id}/roles`, { body: body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -58,5 +49,7 @@ export interface RoleAssignParams {
 }
 
 export declare namespace Roles {
-  export { type RoleAssignParams as RoleAssignParams };
+  export {
+    type RoleAssignParams as RoleAssignParams
+  };
 }

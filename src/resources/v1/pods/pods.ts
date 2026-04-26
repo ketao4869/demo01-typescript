@@ -2,16 +2,7 @@
 
 import { APIResource } from '../../../core/resource';
 import * as TimeSlotsAPI from './time-slots';
-import {
-  TimeSlotCreateBatchParams,
-  TimeSlotCreateParams,
-  TimeSlotDeleteParams,
-  TimeSlotListParams,
-  TimeSlotLockParams,
-  TimeSlotRetrieveParams,
-  TimeSlotUnlockParams,
-  TimeSlots,
-} from './time-slots';
+import { TimeSlotCreateBatchParams, TimeSlotCreateParams, TimeSlotDeleteParams, TimeSlotListParams, TimeSlotLockParams, TimeSlotRetrieveParams, TimeSlotUnlockParams, TimeSlots } from './time-slots';
 import { APIPromise } from '../../../core/api-promise';
 import { buildHeaders } from '../../../internal/headers';
 import { RequestOptions } from '../../../internal/request-options';
@@ -41,12 +32,7 @@ export class Pods extends APIResource {
    * ```
    */
   create(body: PodCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/pods', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/pods', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -61,11 +47,7 @@ export class Pods extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/pods/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/pods/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -80,12 +62,7 @@ export class Pods extends APIResource {
    * ```
    */
   update(id: string, body: PodUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/pods/${id}`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/pods/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -100,12 +77,7 @@ export class Pods extends APIResource {
    * ```
    */
   list(query: PodListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/pods', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/pods', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -120,11 +92,7 @@ export class Pods extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/pods/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/pods/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -139,11 +107,7 @@ export class Pods extends APIResource {
    * ```
    */
   disable(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/pods/${id}/disable`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/pods/${id}/disable`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -158,11 +122,7 @@ export class Pods extends APIResource {
    * ```
    */
   enable(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/pods/${id}/enable`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/pods/${id}/enable`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -179,11 +139,7 @@ export class Pods extends APIResource {
    * ```
    */
   listByFixedPoint(fixedPointID: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/pods/by-fixed-point/${fixedPointID}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/pods/by-fixed-point/${fixedPointID}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -321,7 +277,7 @@ export declare namespace Pods {
   export {
     type PodCreateParams as PodCreateParams,
     type PodUpdateParams as PodUpdateParams,
-    type PodListParams as PodListParams,
+    type PodListParams as PodListParams
   };
 
   export {
@@ -332,6 +288,6 @@ export declare namespace Pods {
     type TimeSlotDeleteParams as TimeSlotDeleteParams,
     type TimeSlotCreateBatchParams as TimeSlotCreateBatchParams,
     type TimeSlotLockParams as TimeSlotLockParams,
-    type TimeSlotUnlockParams as TimeSlotUnlockParams,
+    type TimeSlotUnlockParams as TimeSlotUnlockParams
   };
 }

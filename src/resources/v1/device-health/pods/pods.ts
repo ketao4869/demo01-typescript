@@ -11,5 +11,7 @@ export class Pods extends APIResource {
 Pods.Devices = Devices;
 
 export declare namespace Pods {
-  export { Devices as Devices };
+  export {
+    Devices as Devices
+  };
 }
