@@ -30,12 +30,7 @@ export class Tutors extends APIResource {
    * ```
    */
   create(body: TutorCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/tutors', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/tutors', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -50,11 +45,7 @@ export class Tutors extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/tutors/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/tutors/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -69,12 +60,7 @@ export class Tutors extends APIResource {
    * ```
    */
   update(id: string, body: TutorUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/tutors/${id}`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/tutors/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -89,12 +75,7 @@ export class Tutors extends APIResource {
    * ```
    */
   list(query: TutorListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/tutors', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/tutors', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -109,11 +90,7 @@ export class Tutors extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/tutors/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/tutors/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -128,11 +105,7 @@ export class Tutors extends APIResource {
    * ```
    */
   lock(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/tutors/${id}/lock`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/tutors/${id}/lock`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -147,11 +120,7 @@ export class Tutors extends APIResource {
    * ```
    */
   unlock(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/tutors/${id}/unlock`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/tutors/${id}/unlock`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -232,12 +201,12 @@ export declare namespace Tutors {
   export {
     type TutorCreateParams as TutorCreateParams,
     type TutorUpdateParams as TutorUpdateParams,
-    type TutorListParams as TutorListParams,
+    type TutorListParams as TutorListParams
   };
 
   export {
     Courses as Courses,
     type CourseBindParams as CourseBindParams,
-    type CourseUnbindParams as CourseUnbindParams,
+    type CourseUnbindParams as CourseUnbindParams
   };
 }

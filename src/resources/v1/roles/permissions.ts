@@ -24,11 +24,7 @@ export class Permissions extends APIResource {
    * ```
    */
   list(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/roles/${id}/permissions`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/roles/${id}/permissions`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -46,13 +42,8 @@ export class Permissions extends APIResource {
    * ```
    */
   assign(id: string, params: PermissionAssignParams, options?: RequestOptions): APIPromise<Response> {
-    const { body } = params;
-    return this._client.post(path`/api/v1/roles/${id}/permissions`, {
-      body: body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { body } = params
+    return this._client.post(path`/api/v1/roles/${id}/permissions`, { body: body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -70,13 +61,8 @@ export class Permissions extends APIResource {
    * ```
    */
   remove(id: string, params: PermissionRemoveParams, options?: RequestOptions): APIPromise<Response> {
-    const { body } = params;
-    return this._client.delete(path`/api/v1/roles/${id}/permissions`, {
-      body: body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { body } = params
+    return this._client.delete(path`/api/v1/roles/${id}/permissions`, { body: body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -91,6 +77,6 @@ export interface PermissionRemoveParams {
 export declare namespace Permissions {
   export {
     type PermissionAssignParams as PermissionAssignParams,
-    type PermissionRemoveParams as PermissionRemoveParams,
+    type PermissionRemoveParams as PermissionRemoveParams
   };
 }

@@ -29,12 +29,7 @@ export class MaintenanceOrders extends APIResource {
    * ```
    */
   create(body: MaintenanceOrderCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/maintenance-orders', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/maintenance-orders', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -50,11 +45,7 @@ export class MaintenanceOrders extends APIResource {
    * ```
    */
   retrieve(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/maintenance-orders/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/maintenance-orders/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -69,16 +60,8 @@ export class MaintenanceOrders extends APIResource {
    * console.log(content);
    * ```
    */
-  list(
-    query: MaintenanceOrderListParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.get('/api/v1/maintenance-orders', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  list(query: MaintenanceOrderListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
+    return this._client.get('/api/v1/maintenance-orders', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -96,12 +79,7 @@ export class MaintenanceOrders extends APIResource {
    * ```
    */
   assign(id: number, body: MaintenanceOrderAssignParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/maintenance-orders/${id}/assign`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/maintenance-orders/${id}/assign`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -119,12 +97,7 @@ export class MaintenanceOrders extends APIResource {
    * ```
    */
   close(id: number, body: MaintenanceOrderCloseParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/maintenance-orders/${id}/close`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/maintenance-orders/${id}/close`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -142,12 +115,7 @@ export class MaintenanceOrders extends APIResource {
    * ```
    */
   escalate(id: number, body: MaintenanceOrderEscalateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/maintenance-orders/${id}/escalate`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/maintenance-orders/${id}/escalate`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -164,11 +132,7 @@ export class MaintenanceOrders extends APIResource {
    * ```
    */
   process(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/maintenance-orders/${id}/process`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/maintenance-orders/${id}/process`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -183,16 +147,8 @@ export class MaintenanceOrders extends APIResource {
    * console.log(content);
    * ```
    */
-  statistics(
-    query: MaintenanceOrderStatisticsParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.get('/api/v1/maintenance-orders/statistics', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  statistics(query: MaintenanceOrderStatisticsParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
+    return this._client.get('/api/v1/maintenance-orders/statistics', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -310,6 +266,6 @@ export declare namespace MaintenanceOrders {
     type MaintenanceOrderAssignParams as MaintenanceOrderAssignParams,
     type MaintenanceOrderCloseParams as MaintenanceOrderCloseParams,
     type MaintenanceOrderEscalateParams as MaintenanceOrderEscalateParams,
-    type MaintenanceOrderStatisticsParams as MaintenanceOrderStatisticsParams,
+    type MaintenanceOrderStatisticsParams as MaintenanceOrderStatisticsParams
   };
 }

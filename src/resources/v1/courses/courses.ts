@@ -32,12 +32,7 @@ export class Courses extends APIResource {
    * ```
    */
   create(body: CourseCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/courses', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/courses', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -52,11 +47,7 @@ export class Courses extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/courses/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/courses/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -71,12 +62,7 @@ export class Courses extends APIResource {
    * ```
    */
   update(id: string, body: CourseUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/courses/${id}`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/courses/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -91,12 +77,7 @@ export class Courses extends APIResource {
    * ```
    */
   list(query: CourseListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/courses', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/courses', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -111,11 +92,7 @@ export class Courses extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/courses/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/courses/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -130,11 +107,7 @@ export class Courses extends APIResource {
    * ```
    */
   publish(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/courses/${id}/publish`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/courses/${id}/publish`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -149,11 +122,7 @@ export class Courses extends APIResource {
    * ```
    */
   unpublish(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/courses/${id}/unpublish`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/courses/${id}/unpublish`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -252,8 +221,11 @@ export declare namespace Courses {
   export {
     type CourseCreateParams as CourseCreateParams,
     type CourseUpdateParams as CourseUpdateParams,
-    type CourseListParams as CourseListParams,
+    type CourseListParams as CourseListParams
   };
 
-  export { Pods as Pods, type PodBindParams as PodBindParams };
+  export {
+    Pods as Pods,
+    type PodBindParams as PodBindParams
+  };
 }

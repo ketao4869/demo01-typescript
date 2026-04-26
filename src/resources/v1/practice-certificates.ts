@@ -23,11 +23,7 @@ export class PracticeCertificates extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/practice-certificates/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/practice-certificates/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -43,11 +39,7 @@ export class PracticeCertificates extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/practice-certificates/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/practice-certificates/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -69,16 +61,8 @@ export class PracticeCertificates extends APIResource {
    * console.log(content);
    * ```
    */
-  practiceCertificates(
-    body: PracticeCertificatePracticeCertificatesParams,
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.post('/api/v1/practice-certificates', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  practiceCertificates(body: PracticeCertificatePracticeCertificatesParams, options?: RequestOptions): APIPromise<Response> {
+    return this._client.post('/api/v1/practice-certificates', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -93,16 +77,8 @@ export class PracticeCertificates extends APIResource {
    * console.log(content);
    * ```
    */
-  retrievePracticeCertificates(
-    query: PracticeCertificateRetrievePracticeCertificatesParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.get('/api/v1/practice-certificates', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  retrievePracticeCertificates(query: PracticeCertificateRetrievePracticeCertificatesParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
+    return this._client.get('/api/v1/practice-certificates', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -146,6 +122,6 @@ export interface PracticeCertificateRetrievePracticeCertificatesParams {
 export declare namespace PracticeCertificates {
   export {
     type PracticeCertificatePracticeCertificatesParams as PracticeCertificatePracticeCertificatesParams,
-    type PracticeCertificateRetrievePracticeCertificatesParams as PracticeCertificateRetrievePracticeCertificatesParams,
+    type PracticeCertificateRetrievePracticeCertificatesParams as PracticeCertificateRetrievePracticeCertificatesParams
   };
 }

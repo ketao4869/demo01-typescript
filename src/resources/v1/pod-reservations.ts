@@ -31,12 +31,7 @@ export class PodReservations extends APIResource {
    * ```
    */
   create(body: PodReservationCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/pod-reservations', {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.post('/api/v1/pod-reservations', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -52,11 +47,7 @@ export class PodReservations extends APIResource {
    * ```
    */
   retrieve(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/pod-reservations/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/pod-reservations/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -71,16 +62,8 @@ export class PodReservations extends APIResource {
    * console.log(content);
    * ```
    */
-  list(
-    query: PodReservationListParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.get('/api/v1/pod-reservations', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  list(query: PodReservationListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
+    return this._client.get('/api/v1/pod-reservations', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -96,11 +79,7 @@ export class PodReservations extends APIResource {
    * ```
    */
   delete(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/pod-reservations/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/pod-reservations/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -115,11 +94,7 @@ export class PodReservations extends APIResource {
    * ```
    */
   cancel(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/pod-reservations/${id}/cancel`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.put(path`/api/v1/pod-reservations/${id}/cancel`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -180,6 +155,6 @@ export interface PodReservationListParams {
 export declare namespace PodReservations {
   export {
     type PodReservationCreateParams as PodReservationCreateParams,
-    type PodReservationListParams as PodReservationListParams,
+    type PodReservationListParams as PodReservationListParams
   };
 }

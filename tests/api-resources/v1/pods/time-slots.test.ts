@@ -2,21 +2,18 @@
 
 import Demo01 from 'ketao';
 
-const client = new Demo01({
-  apiKey: 'My API Key',
-  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
-});
+const client = new Demo01({ apiKey: 'My API Key', baseURL: process.env["TEST_API_BASE_URL"] ?? 'http://127.0.0.1:4010' });
 
 describe('resource timeSlots', () => {
   // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.v1.pods.timeSlots.create('podId', {
-      endTime: 'endTime',
-      podId: 'podId',
-      slotDate: '2019-12-27',
-      startTime: 'startTime',
-      status: 'status',
-    });
+    endTime: 'endTime',
+    podId: 'podId',
+    slotDate: '2019-12-27',
+    startTime: 'startTime',
+    status: 'status',
+  });
   });
 
   // Mock server tests are disabled
@@ -37,13 +34,13 @@ describe('resource timeSlots', () => {
   // Mock server tests are disabled
   test.skip('createBatch: required and optional params', async () => {
     const response = await client.v1.pods.timeSlots.createBatch('podId', {
-      endDate: '2019-12-27',
-      endTime: 'endTime',
-      podId: 'podId',
-      startDate: '2019-12-27',
-      startTime: 'startTime',
-      slotDuration: 0,
-    });
+    endDate: '2019-12-27',
+    endTime: 'endTime',
+    podId: 'podId',
+    startDate: '2019-12-27',
+    startTime: 'startTime',
+    slotDuration: 0,
+  });
   });
 
   // Mock server tests are disabled

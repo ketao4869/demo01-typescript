@@ -24,11 +24,7 @@ export class OperationLogs extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/operation-logs/${id}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete(path`/api/v1/operation-logs/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -45,13 +41,8 @@ export class OperationLogs extends APIResource {
    * ```
    */
   deleteBatch(params: OperationLogDeleteBatchParams, options?: RequestOptions): APIPromise<Response> {
-    const { ids } = params;
-    return this._client.delete('/api/v1/operation-logs/batch', {
-      query: { ids },
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { ids } = params
+    return this._client.delete('/api/v1/operation-logs/batch', { query: { ids }, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -67,11 +58,7 @@ export class OperationLogs extends APIResource {
    * ```
    */
   deleteClear(options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete('/api/v1/operation-logs/clear', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.delete('/api/v1/operation-logs/clear', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -86,16 +73,8 @@ export class OperationLogs extends APIResource {
    * console.log(content);
    * ```
    */
-  retrieveOperationLogs(
-    query: OperationLogRetrieveOperationLogsParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Response> {
-    return this._client.get('/api/v1/operation-logs', {
-      query,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+  retrieveOperationLogs(query: OperationLogRetrieveOperationLogsParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
+    return this._client.get('/api/v1/operation-logs', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -111,11 +90,7 @@ export class OperationLogs extends APIResource {
    * ```
    */
   retrieveRetentionConfig(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/operation-logs/retention-config', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/operation-logs/retention-config', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -131,11 +106,7 @@ export class OperationLogs extends APIResource {
    * ```
    */
   retrieveStats(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/operation-logs/stats', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/operation-logs/stats', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -164,6 +135,6 @@ export interface OperationLogRetrieveOperationLogsParams {
 export declare namespace OperationLogs {
   export {
     type OperationLogDeleteBatchParams as OperationLogDeleteBatchParams,
-    type OperationLogRetrieveOperationLogsParams as OperationLogRetrieveOperationLogsParams,
+    type OperationLogRetrieveOperationLogsParams as OperationLogRetrieveOperationLogsParams
   };
 }

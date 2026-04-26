@@ -22,11 +22,7 @@ export class Pods extends APIResource {
    * ```
    */
   list(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/courses/${id}/pods`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get(path`/api/v1/courses/${id}/pods`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 
   /**
@@ -43,13 +39,8 @@ export class Pods extends APIResource {
    * ```
    */
   bind(id: string, params: PodBindParams, options?: RequestOptions): APIPromise<Response> {
-    const { body } = params;
-    return this._client.post(path`/api/v1/courses/${id}/pods`, {
-      body: body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    const { body } = params
+    return this._client.post(path`/api/v1/courses/${id}/pods`, { body: body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
 
@@ -58,5 +49,7 @@ export interface PodBindParams {
 }
 
 export declare namespace Pods {
-  export { type PodBindParams as PodBindParams };
+  export {
+    type PodBindParams as PodBindParams
+  };
 }

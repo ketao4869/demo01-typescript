@@ -22,10 +22,6 @@ export class Health extends APIResource {
    * ```
    */
   retrieveDistribution(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/monitor-dashboard/health/distribution', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-      __binaryResponse: true,
-    });
+    return this._client.get('/api/v1/monitor-dashboard/health/distribution', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
   }
 }
