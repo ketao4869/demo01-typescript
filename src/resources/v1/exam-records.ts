@@ -28,7 +28,12 @@ export class ExamRecords extends APIResource {
    * ```
    */
   create(body: ExamRecordCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/exam-records', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/exam-records', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -43,7 +48,11 @@ export class ExamRecords extends APIResource {
    * ```
    */
   retrieve(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/exam-records/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/exam-records/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -58,7 +67,12 @@ export class ExamRecords extends APIResource {
    * ```
    */
   list(query: ExamRecordListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/exam-records', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/exam-records', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -73,7 +87,11 @@ export class ExamRecords extends APIResource {
    * ```
    */
   delete(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/exam-records/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.delete(path`/api/v1/exam-records/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -88,7 +106,12 @@ export class ExamRecords extends APIResource {
    * ```
    */
   complete(id: number, body: ExamRecordCompleteParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/exam-records/${id}/complete`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/exam-records/${id}/complete`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -102,8 +125,16 @@ export class ExamRecords extends APIResource {
    * console.log(content);
    * ```
    */
-  statistics(query: ExamRecordStatisticsParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/exam-records/statistics', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  statistics(
+    query: ExamRecordStatisticsParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/exam-records/statistics', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -180,6 +211,6 @@ export declare namespace ExamRecords {
     type ExamRecordCreateParams as ExamRecordCreateParams,
     type ExamRecordListParams as ExamRecordListParams,
     type ExamRecordCompleteParams as ExamRecordCompleteParams,
-    type ExamRecordStatisticsParams as ExamRecordStatisticsParams
+    type ExamRecordStatisticsParams as ExamRecordStatisticsParams,
   };
 }

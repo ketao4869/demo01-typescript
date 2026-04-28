@@ -28,8 +28,16 @@ export class DeviceHealth extends APIResource {
    * console.log(content);
    * ```
    */
-  retrieveStatistics(query: DeviceHealthRetrieveStatisticsParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/device-health/statistics', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  retrieveStatistics(
+    query: DeviceHealthRetrieveStatisticsParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/device-health/statistics', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -44,15 +52,9 @@ DeviceHealth.Pods = Pods;
 DeviceHealth.Devices = Devices;
 
 export declare namespace DeviceHealth {
-  export {
-    type DeviceHealthRetrieveStatisticsParams as DeviceHealthRetrieveStatisticsParams
-  };
+  export { type DeviceHealthRetrieveStatisticsParams as DeviceHealthRetrieveStatisticsParams };
 
-  export {
-    Pods as Pods
-  };
+  export { Pods as Pods };
 
-  export {
-    Devices as Devices
-  };
+  export { Devices as Devices };
 }

@@ -22,6 +22,10 @@ export class Pods extends APIResource {
    * ```
    */
   retrieveStatus(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/monitor-dashboard/pods/status', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/monitor-dashboard/pods/status', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }

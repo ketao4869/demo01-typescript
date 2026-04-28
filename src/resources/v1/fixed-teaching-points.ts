@@ -30,7 +30,12 @@ export class FixedTeachingPoints extends APIResource {
    * ```
    */
   create(body: FixedTeachingPointCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/fixed-teaching-points', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/fixed-teaching-points', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -46,7 +51,11 @@ export class FixedTeachingPoints extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/fixed-teaching-points/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/fixed-teaching-points/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -62,7 +71,12 @@ export class FixedTeachingPoints extends APIResource {
    * ```
    */
   update(id: string, body: FixedTeachingPointUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/fixed-teaching-points/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/fixed-teaching-points/${id}`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -77,8 +91,16 @@ export class FixedTeachingPoints extends APIResource {
    * console.log(content);
    * ```
    */
-  list(query: FixedTeachingPointListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/fixed-teaching-points', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  list(
+    query: FixedTeachingPointListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/fixed-teaching-points', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -94,7 +116,11 @@ export class FixedTeachingPoints extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/fixed-teaching-points/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.delete(path`/api/v1/fixed-teaching-points/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -110,7 +136,11 @@ export class FixedTeachingPoints extends APIResource {
    * ```
    */
   listEnabled(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/fixed-teaching-points/enabled', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/fixed-teaching-points/enabled', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -219,6 +249,6 @@ export declare namespace FixedTeachingPoints {
   export {
     type FixedTeachingPointCreateParams as FixedTeachingPointCreateParams,
     type FixedTeachingPointUpdateParams as FixedTeachingPointUpdateParams,
-    type FixedTeachingPointListParams as FixedTeachingPointListParams
+    type FixedTeachingPointListParams as FixedTeachingPointListParams,
   };
 }

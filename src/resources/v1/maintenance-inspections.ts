@@ -27,7 +27,12 @@ export class MaintenanceInspections extends APIResource {
    * ```
    */
   create(body: MaintenanceInspectionCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/maintenance-inspections', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/maintenance-inspections', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -43,7 +48,11 @@ export class MaintenanceInspections extends APIResource {
    * ```
    */
   retrieve(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/maintenance-inspections/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/maintenance-inspections/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -58,8 +67,16 @@ export class MaintenanceInspections extends APIResource {
    * console.log(content);
    * ```
    */
-  list(query: MaintenanceInspectionListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/maintenance-inspections', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  list(
+    query: MaintenanceInspectionListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/maintenance-inspections', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -75,7 +92,11 @@ export class MaintenanceInspections extends APIResource {
    * ```
    */
   cancel(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/maintenance-inspections/${id}/cancel`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/maintenance-inspections/${id}/cancel`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -90,8 +111,17 @@ export class MaintenanceInspections extends APIResource {
    * console.log(content);
    * ```
    */
-  complete(id: number, body: MaintenanceInspectionCompleteParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/maintenance-inspections/${id}/complete`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  complete(
+    id: number,
+    body: MaintenanceInspectionCompleteParams,
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.put(path`/api/v1/maintenance-inspections/${id}/complete`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -107,7 +137,11 @@ export class MaintenanceInspections extends APIResource {
    * ```
    */
   start(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/maintenance-inspections/${id}/start`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/maintenance-inspections/${id}/start`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -122,8 +156,16 @@ export class MaintenanceInspections extends APIResource {
    * console.log(content);
    * ```
    */
-  statistics(query: MaintenanceInspectionStatisticsParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/maintenance-inspections/statistics', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  statistics(
+    query: MaintenanceInspectionStatisticsParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/maintenance-inspections/statistics', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -190,6 +232,6 @@ export declare namespace MaintenanceInspections {
     type MaintenanceInspectionCreateParams as MaintenanceInspectionCreateParams,
     type MaintenanceInspectionListParams as MaintenanceInspectionListParams,
     type MaintenanceInspectionCompleteParams as MaintenanceInspectionCompleteParams,
-    type MaintenanceInspectionStatisticsParams as MaintenanceInspectionStatisticsParams
+    type MaintenanceInspectionStatisticsParams as MaintenanceInspectionStatisticsParams,
   };
 }

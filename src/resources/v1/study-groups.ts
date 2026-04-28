@@ -25,7 +25,12 @@ export class StudyGroups extends APIResource {
    * ```
    */
   create(body: StudyGroupCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/study-groups', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/study-groups', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -42,7 +47,11 @@ export class StudyGroups extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/study-groups/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/study-groups/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -57,7 +66,12 @@ export class StudyGroups extends APIResource {
    * ```
    */
   update(id: string, body: StudyGroupUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/study-groups/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/study-groups/${id}`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -72,7 +86,12 @@ export class StudyGroups extends APIResource {
    * ```
    */
   list(query: StudyGroupListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/study-groups', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/study-groups', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -87,7 +106,11 @@ export class StudyGroups extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/study-groups/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.delete(path`/api/v1/study-groups/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -134,6 +157,6 @@ export declare namespace StudyGroups {
   export {
     type StudyGroupCreateParams as StudyGroupCreateParams,
     type StudyGroupUpdateParams as StudyGroupUpdateParams,
-    type StudyGroupListParams as StudyGroupListParams
+    type StudyGroupListParams as StudyGroupListParams,
   };
 }

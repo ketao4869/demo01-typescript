@@ -26,8 +26,12 @@ export class Course extends APIResource {
    * ```
    */
   retrieve(courseID: string, params: CourseRetrieveParams, options?: RequestOptions): APIPromise<Response> {
-    const { studentId } = params
-    return this._client.get(path`/api/v1/study-archives/student/${studentId}/course/${courseID}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    const { studentId } = params;
+    return this._client.get(path`/api/v1/study-archives/student/${studentId}/course/${courseID}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -45,9 +49,18 @@ export class Course extends APIResource {
    * console.log(content);
    * ```
    */
-  updateStudyTime(courseID: string, params: CourseUpdateStudyTimeParams, options?: RequestOptions): APIPromise<Response> {
-    const { studentId, minutes } = params
-    return this._client.put(path`/api/v1/study-archives/student/${studentId}/course/${courseID}/study-time`, { query: { minutes }, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  updateStudyTime(
+    courseID: string,
+    params: CourseUpdateStudyTimeParams,
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    const { studentId, minutes } = params;
+    return this._client.put(path`/api/v1/study-archives/student/${studentId}/course/${courseID}/study-time`, {
+      query: { minutes },
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -73,6 +86,6 @@ export interface CourseUpdateStudyTimeParams {
 export declare namespace Course {
   export {
     type CourseRetrieveParams as CourseRetrieveParams,
-    type CourseUpdateStudyTimeParams as CourseUpdateStudyTimeParams
+    type CourseUpdateStudyTimeParams as CourseUpdateStudyTimeParams,
   };
 }
