@@ -14,6 +14,6 @@ export declare namespace Student {
   export {
     Course as Course,
     type CourseRetrieveParams as CourseRetrieveParams,
-    type CourseUpdateStudyTimeParams as CourseUpdateStudyTimeParams
+    type CourseUpdateStudyTimeParams as CourseUpdateStudyTimeParams,
   };
 }

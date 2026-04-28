@@ -22,7 +22,11 @@ export class Statistics extends APIResource {
    * ```
    */
   retrieveCourses(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/statistics/courses', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/statistics/courses', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -38,7 +42,11 @@ export class Statistics extends APIResource {
    * ```
    */
   retrieveOverview(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/statistics/overview', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/statistics/overview', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -53,7 +61,11 @@ export class Statistics extends APIResource {
    * ```
    */
   retrievePods(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/statistics/pods', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/statistics/pods', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -69,6 +81,10 @@ export class Statistics extends APIResource {
    * ```
    */
   retrieveStudents(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/statistics/students', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/statistics/students', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }

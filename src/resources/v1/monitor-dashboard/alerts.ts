@@ -21,8 +21,16 @@ export class Alerts extends APIResource {
    * console.log(content);
    * ```
    */
-  retrieveRealtime(query: AlertRetrieveRealtimeParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/monitor-dashboard/alerts/realtime', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  retrieveRealtime(
+    query: AlertRetrieveRealtimeParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/monitor-dashboard/alerts/realtime', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -34,7 +42,5 @@ export interface AlertRetrieveRealtimeParams {
 }
 
 export declare namespace Alerts {
-  export {
-    type AlertRetrieveRealtimeParams as AlertRetrieveRealtimeParams
-  };
+  export { type AlertRetrieveRealtimeParams as AlertRetrieveRealtimeParams };
 }

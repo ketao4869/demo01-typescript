@@ -27,7 +27,12 @@ export class Notices extends APIResource {
    * ```
    */
   create(body: NoticeCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/notices', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/notices', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -42,7 +47,11 @@ export class Notices extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/notices/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/notices/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -62,7 +71,12 @@ export class Notices extends APIResource {
    * ```
    */
   update(id: string, body: NoticeUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/notices/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/notices/${id}`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -77,7 +91,12 @@ export class Notices extends APIResource {
    * ```
    */
   list(query: NoticeListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/notices', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/notices', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -92,7 +111,11 @@ export class Notices extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/notices/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.delete(path`/api/v1/notices/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -107,7 +130,11 @@ export class Notices extends APIResource {
    * ```
    */
   publish(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/notices/${id}/publish`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/notices/${id}/publish`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -210,6 +237,6 @@ export declare namespace Notices {
     type NoticeCreate as NoticeCreate,
     type NoticeCreateParams as NoticeCreateParams,
     type NoticeUpdateParams as NoticeUpdateParams,
-    type NoticeListParams as NoticeListParams
+    type NoticeListParams as NoticeListParams,
   };
 }

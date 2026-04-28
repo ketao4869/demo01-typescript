@@ -21,7 +21,11 @@ export class Tree extends APIResource {
    * ```
    */
   list(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/hr-organizations/tree', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/hr-organizations/tree', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -37,6 +41,10 @@ export class Tree extends APIResource {
    * ```
    */
   retrieveEnabled(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/hr-organizations/tree/enabled', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/hr-organizations/tree/enabled', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }

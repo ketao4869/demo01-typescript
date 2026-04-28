@@ -23,7 +23,12 @@ export class Auth extends APIResource {
    * ```
    */
   forgotPassword(body: AuthForgotPasswordParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/auth/forgot-password', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/auth/forgot-password', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -39,8 +44,16 @@ export class Auth extends APIResource {
    * console.log(content);
    * ```
    */
-  forgotPasswordByPhone(body: AuthForgotPasswordByPhoneParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/auth/forgot-password-by-phone', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  forgotPasswordByPhone(
+    body: AuthForgotPasswordByPhoneParams,
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.post('/api/v1/auth/forgot-password-by-phone', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -58,7 +71,12 @@ export class Auth extends APIResource {
    * ```
    */
   login(body: AuthLoginParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/auth/login', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/auth/login', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -73,7 +91,11 @@ export class Auth extends APIResource {
    * ```
    */
   logout(options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/auth/logout', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/auth/logout', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -91,7 +113,12 @@ export class Auth extends APIResource {
    * ```
    */
   resetPasswordByToken(body: AuthResetPasswordByTokenParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/auth/reset-password-by-token', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/auth/reset-password-by-token', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -106,7 +133,11 @@ export class Auth extends APIResource {
    * ```
    */
   retrieveMenu(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/auth/menu', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/auth/menu', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -121,7 +152,11 @@ export class Auth extends APIResource {
    * ```
    */
   retrieveStats(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/auth/stats', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/auth/stats', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -136,7 +171,11 @@ export class Auth extends APIResource {
    * ```
    */
   retrieveUserinfo(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/auth/userinfo', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/auth/userinfo', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -154,7 +193,12 @@ export class Auth extends APIResource {
    * ```
    */
   updatePassword(body: AuthUpdatePasswordParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put('/api/v1/auth/password', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put('/api/v1/auth/password', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -169,7 +213,12 @@ export class Auth extends APIResource {
    * ```
    */
   updateProfile(body: AuthUpdateProfileParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put('/api/v1/auth/profile', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put('/api/v1/auth/profile', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -270,6 +319,6 @@ export declare namespace Auth {
     type AuthLoginParams as AuthLoginParams,
     type AuthResetPasswordByTokenParams as AuthResetPasswordByTokenParams,
     type AuthUpdatePasswordParams as AuthUpdatePasswordParams,
-    type AuthUpdateProfileParams as AuthUpdateProfileParams
+    type AuthUpdateProfileParams as AuthUpdateProfileParams,
   };
 }

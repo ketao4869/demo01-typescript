@@ -25,8 +25,13 @@ export class DataScopes extends APIResource {
    * ```
    */
   create(id: string, params: DataScopeCreateParams, options?: RequestOptions): APIPromise<Response> {
-    const { body } = params
-    return this._client.post(path`/api/v1/operation-units/${id}/data-scopes`, { body: body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    const { body } = params;
+    return this._client.post(path`/api/v1/operation-units/${id}/data-scopes`, {
+      body: body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -42,7 +47,11 @@ export class DataScopes extends APIResource {
    * ```
    */
   list(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/operation-units/${id}/data-scopes`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/operation-units/${id}/data-scopes`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -68,7 +77,5 @@ export namespace DataScopeCreateParams {
 }
 
 export declare namespace DataScopes {
-  export {
-    type DataScopeCreateParams as DataScopeCreateParams
-  };
+  export { type DataScopeCreateParams as DataScopeCreateParams };
 }

@@ -23,7 +23,11 @@ export class PracticeRecords extends APIResource {
    * ```
    */
   retrieve(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/practice-records/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/practice-records/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -39,7 +43,11 @@ export class PracticeRecords extends APIResource {
    * ```
    */
   delete(id: number, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/practice-records/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.delete(path`/api/v1/practice-records/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -59,7 +67,12 @@ export class PracticeRecords extends APIResource {
    * ```
    */
   practiceRecords(body: PracticeRecordPracticeRecordsParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/practice-records', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/practice-records', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -74,8 +87,16 @@ export class PracticeRecords extends APIResource {
    * console.log(content);
    * ```
    */
-  retrievePracticeRecords(query: PracticeRecordRetrievePracticeRecordsParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/practice-records', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  retrievePracticeRecords(
+    query: PracticeRecordRetrievePracticeRecordsParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/practice-records', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -90,8 +111,16 @@ export class PracticeRecords extends APIResource {
    * console.log(content);
    * ```
    */
-  retrieveStatistics(query: PracticeRecordRetrieveStatisticsParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/practice-records/statistics', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  retrieveStatistics(
+    query: PracticeRecordRetrieveStatisticsParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/practice-records/statistics', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -155,6 +184,6 @@ export declare namespace PracticeRecords {
   export {
     type PracticeRecordPracticeRecordsParams as PracticeRecordPracticeRecordsParams,
     type PracticeRecordRetrievePracticeRecordsParams as PracticeRecordRetrievePracticeRecordsParams,
-    type PracticeRecordRetrieveStatisticsParams as PracticeRecordRetrieveStatisticsParams
+    type PracticeRecordRetrieveStatisticsParams as PracticeRecordRetrieveStatisticsParams,
   };
 }

@@ -24,8 +24,16 @@ export class StudyArchives extends APIResource {
    * console.log(content);
    * ```
    */
-  list(query: StudyArchiveListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/study-archives', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  list(
+    query: StudyArchiveListParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.get('/api/v1/study-archives', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -42,11 +50,7 @@ export interface StudyArchiveListParams {
 StudyArchives.Student = Student;
 
 export declare namespace StudyArchives {
-  export {
-    type StudyArchiveListParams as StudyArchiveListParams
-  };
+  export { type StudyArchiveListParams as StudyArchiveListParams };
 
-  export {
-    Student as Student
-  };
+  export { Student as Student };
 }

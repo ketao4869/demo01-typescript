@@ -22,6 +22,10 @@ export class Operation extends APIResource {
    * ```
    */
   retrieveStats(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/monitor-dashboard/operation/stats', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/monitor-dashboard/operation/stats', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }

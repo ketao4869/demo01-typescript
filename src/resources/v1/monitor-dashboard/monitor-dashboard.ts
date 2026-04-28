@@ -35,7 +35,11 @@ export class MonitorDashboard extends APIResource {
    * ```
    */
   retrieveOverview(options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/monitor-dashboard/overview', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/monitor-dashboard/overview', {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -45,20 +49,11 @@ MonitorDashboard.Health = Health;
 MonitorDashboard.Alerts = Alerts;
 
 export declare namespace MonitorDashboard {
-  export {
-    Pods as Pods
-  };
+  export { Pods as Pods };
 
-  export {
-    Operation as Operation
-  };
+  export { Operation as Operation };
 
-  export {
-    Health as Health
-  };
+  export { Health as Health };
 
-  export {
-    Alerts as Alerts,
-    type AlertRetrieveRealtimeParams as AlertRetrieveRealtimeParams
-  };
+  export { Alerts as Alerts, type AlertRetrieveRealtimeParams as AlertRetrieveRealtimeParams };
 }

@@ -25,7 +25,12 @@ export class Complaints extends APIResource {
    * ```
    */
   create(body: ComplaintCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/complaints', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/complaints', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -40,7 +45,11 @@ export class Complaints extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/complaints/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/complaints/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -55,7 +64,12 @@ export class Complaints extends APIResource {
    * ```
    */
   list(query: ComplaintListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/complaints', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/complaints', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -72,8 +86,17 @@ export class Complaints extends APIResource {
    * console.log(content);
    * ```
    */
-  updateProcess(id: string, body: ComplaintUpdateProcessParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/complaints/${id}/process`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+  updateProcess(
+    id: string,
+    body: ComplaintUpdateProcessParams,
+    options?: RequestOptions,
+  ): APIPromise<Response> {
+    return this._client.put(path`/api/v1/complaints/${id}/process`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -125,6 +148,6 @@ export declare namespace Complaints {
   export {
     type ComplaintCreateParams as ComplaintCreateParams,
     type ComplaintListParams as ComplaintListParams,
-    type ComplaintUpdateProcessParams as ComplaintUpdateProcessParams
+    type ComplaintUpdateProcessParams as ComplaintUpdateProcessParams,
   };
 }

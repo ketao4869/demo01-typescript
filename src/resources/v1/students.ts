@@ -25,7 +25,12 @@ export class Students extends APIResource {
    * ```
    */
   create(body: StudentCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/students', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/students', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -40,7 +45,11 @@ export class Students extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/students/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/students/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -55,7 +64,12 @@ export class Students extends APIResource {
    * ```
    */
   update(id: string, body: StudentUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/students/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/students/${id}`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -70,7 +84,12 @@ export class Students extends APIResource {
    * ```
    */
   list(query: StudentListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/students', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/students', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -85,7 +104,11 @@ export class Students extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/students/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.delete(path`/api/v1/students/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -100,7 +123,11 @@ export class Students extends APIResource {
    * ```
    */
   lock(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/students/${id}/lock`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/students/${id}/lock`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -115,7 +142,11 @@ export class Students extends APIResource {
    * ```
    */
   unlock(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/students/${id}/unlock`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/students/${id}/unlock`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -194,6 +225,6 @@ export declare namespace Students {
   export {
     type StudentCreateParams as StudentCreateParams,
     type StudentUpdateParams as StudentUpdateParams,
-    type StudentListParams as StudentListParams
+    type StudentListParams as StudentListParams,
   };
 }

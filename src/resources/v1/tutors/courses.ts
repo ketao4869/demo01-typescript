@@ -22,7 +22,11 @@ export class Courses extends APIResource {
    * ```
    */
   list(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/tutors/${id}/courses`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/tutors/${id}/courses`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -39,8 +43,13 @@ export class Courses extends APIResource {
    * ```
    */
   bind(id: string, params: CourseBindParams, options?: RequestOptions): APIPromise<Response> {
-    const { body } = params
-    return this._client.post(path`/api/v1/tutors/${id}/courses`, { body: body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    const { body } = params;
+    return this._client.post(path`/api/v1/tutors/${id}/courses`, {
+      body: body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -58,8 +67,12 @@ export class Courses extends APIResource {
    * ```
    */
   unbind(courseID: string, params: CourseUnbindParams, options?: RequestOptions): APIPromise<Response> {
-    const { id } = params
-    return this._client.delete(path`/api/v1/tutors/${id}/courses/${courseID}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    const { id } = params;
+    return this._client.delete(path`/api/v1/tutors/${id}/courses/${courseID}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -75,8 +88,5 @@ export interface CourseUnbindParams {
 }
 
 export declare namespace Courses {
-  export {
-    type CourseBindParams as CourseBindParams,
-    type CourseUnbindParams as CourseUnbindParams
-  };
+  export { type CourseBindParams as CourseBindParams, type CourseUnbindParams as CourseUnbindParams };
 }

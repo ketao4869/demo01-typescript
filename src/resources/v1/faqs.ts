@@ -27,7 +27,12 @@ export class Faqs extends APIResource {
    * ```
    */
   create(body: FaqCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/faqs', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/faqs', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -42,7 +47,11 @@ export class Faqs extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/faqs/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/faqs/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -62,7 +71,12 @@ export class Faqs extends APIResource {
    * ```
    */
   update(id: string, body: FaqUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/faqs/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/faqs/${id}`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -77,7 +91,12 @@ export class Faqs extends APIResource {
    * ```
    */
   list(query: FaqListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/faqs', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/faqs', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -92,7 +111,11 @@ export class Faqs extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/faqs/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.delete(path`/api/v1/faqs/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -195,6 +218,6 @@ export declare namespace Faqs {
     type FaqCreate as FaqCreate,
     type FaqCreateParams as FaqCreateParams,
     type FaqUpdateParams as FaqUpdateParams,
-    type FaqListParams as FaqListParams
+    type FaqListParams as FaqListParams,
   };
 }

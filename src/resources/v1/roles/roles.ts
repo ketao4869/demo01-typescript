@@ -29,7 +29,12 @@ export class Roles extends APIResource {
    * ```
    */
   create(body: RoleCreateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.post('/api/v1/roles', { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.post('/api/v1/roles', {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -44,7 +49,11 @@ export class Roles extends APIResource {
    * ```
    */
   retrieve(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get(path`/api/v1/roles/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get(path`/api/v1/roles/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -59,7 +68,12 @@ export class Roles extends APIResource {
    * ```
    */
   update(id: string, body: RoleUpdateParams, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/roles/${id}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/roles/${id}`, {
+      body,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -74,7 +88,12 @@ export class Roles extends APIResource {
    * ```
    */
   list(query: RoleListParams | null | undefined = {}, options?: RequestOptions): APIPromise<Response> {
-    return this._client.get('/api/v1/roles', { query, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.get('/api/v1/roles', {
+      query,
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -89,7 +108,11 @@ export class Roles extends APIResource {
    * ```
    */
   delete(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.delete(path`/api/v1/roles/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.delete(path`/api/v1/roles/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -104,7 +127,11 @@ export class Roles extends APIResource {
    * ```
    */
   disable(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/roles/${id}/disable`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/roles/${id}/disable`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 
   /**
@@ -119,7 +146,11 @@ export class Roles extends APIResource {
    * ```
    */
   enable(id: string, options?: RequestOptions): APIPromise<Response> {
-    return this._client.put(path`/api/v1/roles/${id}/enable`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]), __binaryResponse: true });
+    return this._client.put(path`/api/v1/roles/${id}/enable`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+      __binaryResponse: true,
+    });
   }
 }
 
@@ -164,12 +195,12 @@ export declare namespace Roles {
   export {
     type RoleCreateParams as RoleCreateParams,
     type RoleUpdateParams as RoleUpdateParams,
-    type RoleListParams as RoleListParams
+    type RoleListParams as RoleListParams,
   };
 
   export {
     Permissions as Permissions,
     type PermissionAssignParams as PermissionAssignParams,
-    type PermissionRemoveParams as PermissionRemoveParams
+    type PermissionRemoveParams as PermissionRemoveParams,
   };
 }
